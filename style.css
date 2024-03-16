@@ -1,0 +1,193 @@
+/* Загальни стилі */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+h1{
+	text-align: center;
+}
+
+.start, .quiz, .end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 100dvh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+    background-color: white;
+    z-index: -1;
+    opacity: -1;
+}
+
+
+/* початкрвий екран */
+
+.start button{
+    height: 35px;
+    border-radius: 10px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.start input{
+    height: 35px;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.show-screen{
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+}
+
+.error{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10%;
+    color: red;
+    opacity: 0;
+}
+
+form{
+    background-color: gray;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* Другий екран */
+.quiz{
+    font-size: 48px;
+}
+.quiz-timer{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: gray;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+.quiz-counter{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 80px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 10px;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+.quiz__answers{
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.quiz__answers button{
+    font-size: 26px;
+    padding: 10px;
+    min-width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Третій екран */
+
+.end h1{
+    text-align: center;
+}
+
+.end button{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.end a{
+    color: black;
+}
+
+.table-container{
+	height: 200px;
+	overflow: auto;
+	padding: 5px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.table-container::-webkit-scrollbar{
+	width: 10px;
+}
+.table-container::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #6e78c9, #604694);
+	border-top: 5px solid white;
+	border-left: 5px solid #ffffff;
+	border-bottom: 5px solid white;
+}
+
+.table-container::-webkit-scrollbar-track {
+	background-color: #ffffff;
+	border-radius: 8px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+}
+
+tr{
+    height: 30px;
+}
+
+.table-number{
+    width: 30px;
+    text-align: center;
+}
+
+.table-name{
+    width: 200px;
+    text-align: center;
+}
+
+.table-point{
+    text-align: center;
+    width: 70px;
+}
+
+table tbody:nth-child(1) tr{
+    background-color: #FFE500;
+}
+
+table tbody:nth-child(2) tr{
+    background-color: #C0C0C0;
+}
+
+table tbody:nth-child(3) tr{
+    background-color: #C05C00;
+}
